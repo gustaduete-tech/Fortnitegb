@@ -8,7 +8,10 @@ jobs:
       - run: |
           curl -L https://github.com/gbdk-2020/gbdk-2020/releases/latest/download/gbdk-linux64.tar.gz | tar xz
           ./gbdk/bin/lcc -o fortnitegb.gb fortnitegb.c
+          ./gbdk/bin/lcc -o nomanboy.gb nomanboy.c
       - uses: actions/upload-artifact@v4
         with:
-          name: fortnitegb
-          path: fortnitegb.gb
+          name: jogos
+          path: |
+            fortnitegb.gb
+            nomanboy.gb
